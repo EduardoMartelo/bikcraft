@@ -68,3 +68,29 @@ if (window.SimpleAnime) {
 new SimpleAnime();
 }
 
+
+
+//Função de volta ao topo
+window.onscroll = function () {
+  showBackTop();
+};
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+//Função aparecer botão após scroll de 100px
+function showBackTop() {
+  const btn = document.querySelector("#goToBack");
+
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    btn.classList.add("active");
+  } else {
+    btn.classList.remove("active");
+  }
+}

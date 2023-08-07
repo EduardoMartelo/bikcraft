@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
@@ -33,4 +37,29 @@ img {
 
 img[src$=".jpg"] {
   border-radius: 4px;
+}
+
+.goToBack {
+  opacity: 0;
+  transition: 0.5s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 12.5px;
+}
+
+.goToBack:hover {
+  background: var(--cor-8);
+  color: #fff;
+}
+.goToBack svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.active {
+  background: var(--cor-p2);
+  opacity: 1;
+  transition: 0.3s ease;
 }
